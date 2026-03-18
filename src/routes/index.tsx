@@ -1,10 +1,7 @@
 import { createFileRoute } from "@tanstack/solid-router";
 import { createSignal } from "solid-js";
-export const Route = createFileRoute("/")({
-  component: Home,
-});
 
-function Home() {
+export function Home() {
   const [counter, setCounter] = createSignal(0);
 
   return (
@@ -21,3 +18,7 @@ function Home() {
     </section>
   );
 }
+
+export const Route = createFileRoute("/")({
+  component: Home,
+});
