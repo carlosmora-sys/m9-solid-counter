@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
-import tsConfigPaths from 'vite-tsconfig-paths';
-import { tanstackStart } from '@tanstack/solid-start/plugin/vite';
-import viteSolid from 'vite-plugin-solid';
-import {nitro} from 'nitro/vite'
+import { defineConfig } from "vite";
+import tsConfigPaths from "vite-tsconfig-paths";
+import { tanstackStart } from "@tanstack/solid-start/plugin/vite";
+import viteSolid from "vite-plugin-solid";
+import { nitro } from "nitro/vite";
 
 export default defineConfig({
   server: {
@@ -10,10 +10,10 @@ export default defineConfig({
   },
   plugins: [
     tsConfigPaths({
-      projects: ['./tsconfig.json'],
+      projects: ["./tsconfig.json"],
     }),
     tanstackStart(),
-		nitro({}),
+    nitro({}),
     viteSolid({ ssr: true }),
   ],
 });
