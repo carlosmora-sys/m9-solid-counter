@@ -7,7 +7,7 @@ on:
 
 jobs:
   ci:
-    name: Lint, Format and Test
+    name: Lint and Format
     runs-on: ubuntu-latest
 
     steps:
